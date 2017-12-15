@@ -25,6 +25,10 @@ You can also pipe commands into `roll`:
     [3] + 0 = 3
     [5, 6, 4, 2, 1, 6] - 1 = 23
 
+If you want bash-like command history controlled by your arrow keys, I recommend using `rlwrap`, which should be available through your distribution's package repository.
+
+    $ rlwrap roll
+
 ## Dependencies
 
-You will only need a recent Python 3 interpreter.
+You will only need a Python interpreter installed. No external dependencies required.

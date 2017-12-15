@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2017 David Haller <davidhaller@mailbox.org>
+# Copyright (C) 2021 David Haller <davidhaller@mailbox.org>
 #
 # roll is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by the
@@ -24,6 +24,7 @@ Dungeons and Dragons, the Pen and Paper role playing game.
 from os import fstat
 from stat import S_ISREG, S_ISFIFO
 from sys import stdin
+from typing import Iterator
 
 import random
 import re
@@ -72,7 +73,7 @@ def parse(statement: str) -> tuple:
     return times, amount, die, bonus
 
 
-def roll(amount: int, die: int):
+def roll(amount: int, die: int) -> Iterator[int]:
     """
     Rolls the dice using a generator.
 
@@ -85,7 +86,7 @@ def roll(amount: int, die: int):
         yield random.randint(1, die)
 
 
-def execute(command: str):
+def execute(command: str) -> Iterator[str]:
     """
     Executes ";"-separated roll statements and returns
     the results in a user-readable form.
