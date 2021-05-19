@@ -122,7 +122,7 @@ def execute(command: str) -> Iterator[str]:
             yield string.format(error.args[0], part)
 
 
-if __name__ == "__main__":
+def main():
     MODE = fstat(stdin.fileno()).st_mode
     if S_ISREG(MODE) or S_ISFIFO(MODE):
         PROMPT = ""
