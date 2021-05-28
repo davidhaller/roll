@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-$ pip install git+https://github.com/davidhaller/dnd-roller.git
+$ pip install git+https://github.com/davidhaller/roll.git
 ```
 
 ## Usage
