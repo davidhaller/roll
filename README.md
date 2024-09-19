@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-$ pip install git+https://github.com/davidhaller/roll.git
+$ pipx install git+https://github.com/davidhaller/roll.git
 ```
 
 ## Usage
