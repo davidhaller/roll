@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-$ pipx install git+https://github.com/davidhaller/roll.git
+pipx install git+https://github.com/davidhaller/roll.git
 ```
 
 ## Usage
@@ -13,7 +13,6 @@ $ pipx install git+https://github.com/davidhaller/roll.git
 Run the roll script from your command line. You will get a shell-like prompt where you can enter roll commands like this:
 
 ```bash
-$ roll
 roll> 1d20 + 4
 [15] + 4 = 19
 roll> 2d8
@@ -29,7 +28,7 @@ Quit the program by typing `exit` or `quit`.
 You can also pipe commands into `roll`:
 
 ```bash
-$ echo "1d12 + 3; 1d4; 6d6 - 1" | roll
+echo "1d12 + 3; 1d4; 6d6 - 1" | roll
 [8] + 3 = 11
 [3] + 0 = 3
 [5, 6, 4, 2, 1, 6] - 1 = 23
@@ -38,7 +37,7 @@ $ echo "1d12 + 3; 1d4; 6d6 - 1" | roll
 If you want bash-like command history controlled by your arrow keys, I recommend using `rlwrap`, which should be available through your distribution's package repository.
 
 ```bash
-$ rlwrap roll
+rlwrap roll
 ```
 
 ## Dependencies
