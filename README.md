@@ -33,7 +33,12 @@ echo "1d12 + 3; 1d4; 6d6 - 1" | roll
 [3] + 0 = 3
 [5, 6, 4, 2, 1, 6] - 1 = 23
 ```
+Or you can pass roll commands as an argument:
 
+```bash
+roll d20
+[20] + 0 = 20
+```
 If you want bash-like command history controlled by your arrow keys, I recommend using `rlwrap`, which should be available through your distribution's package repository.
 
 ```bash

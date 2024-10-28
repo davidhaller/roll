@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # Copyright (C) 2024 David Haller <haller_david@icloud.com>
@@ -23,7 +23,7 @@ Dungeons and Dragons, the Pen and Paper role playing game.
 
 from os import fstat
 from stat import S_ISREG, S_ISFIFO
-from sys import stdin
+from sys import argv, stdin
 from typing import Iterator
 
 import random
@@ -123,6 +123,11 @@ def execute(command: str) -> Iterator[str]:
 
 
 def main():
+    if len(argv) > 1:
+        for line in execute(argv[1]):
+            print(line)
+        exit()
+
     MODE = fstat(stdin.fileno()).st_mode
     if S_ISREG(MODE) or S_ISFIFO(MODE):
         PROMPT = ""

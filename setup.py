@@ -16,7 +16,7 @@ setup(
     long_description_content_type='text/x-markdown',
     keywords='D&D Dice Roll CLI',
     author='David Haller',
-    author_email='davidhaller@mailbox.org',
+    author_email='haller_david@icloud.com',
     license='GPLv3',
     url='https://github.com/davidhaller/roll',
     download_url = 'https://github.com/davidhaller/roll/archive/master.zip',
@@ -29,5 +29,5 @@ setup(
             'roll = roll.__main__:main',
         ]
     },
-    python_requires='>=3.6',
+    python_requires='>=3.12',
 )
